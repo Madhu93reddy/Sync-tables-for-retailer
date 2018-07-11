@@ -1,26 +1,16 @@
 # Sync-tables-for-retailer
 Sync tables 
 
-USE [ALineAtlantic]
+USE XXXX
 GO
 
-/****** Object:  StoredProcedure [dbo].[ep_ins_SyncTables]    Script Date: 7/11/2018 7:59:34 AM ******/
+
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
 
-/* +-----------------------------------------------------------------------------------------------------------------+ */
-/* | Release:  Merlin v01.00                                                                                         | */
-/* | Author:   Thomas Antola, Patricia Donovan                                                                       | */
-/* | Written:  03/28/2001                                                                                            | */
-/* | Modified: 05/05/2005                                                                                            | */
-/* | Parms:    @CycleTS         - Server unique timestamp assigned each iteration.                                   | */
-/* |           @Corporate       - Supplier's corporation.                                                            | */
-/* |           @WarehouseMask   - Supplier's division warehouse mask.                                                | */
-/* | Purpose:  This Procedure updates tables in the datawarehouse from the data in the dataAcquisition Database.     | */
-/* +-----------------------------------------------------------------------------------------------------------------+ */
 CREATE    PROCEDURE [dbo].[ep_ins_SyncTables] (@CycleTS CHAR(14), @Corporate VARCHAR(35) = NULL, @WarehouseMask INT = NULL, @STradingPartnerFK SMALLINT = NULL, @ReportDate SMALLDATETIME = NULL) AS
 BEGIN
 
